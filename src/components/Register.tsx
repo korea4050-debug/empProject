@@ -4,7 +4,7 @@ import {Employee} from "@/types/type";
 import {useDispatch} from "react-redux";
 import styled from "styled-components";
 import {tempEmp} from "@/redux/empSlice";
-import {fetchGetEmployeeInfos, fetchPostEmployeeInfo} from "@/redux/empApi";
+import {registerEmp} from "@/redux/empSlice";
 import {RootDispatch} from "@/redux/store";
 
 export const Form = styled.form`
@@ -43,9 +43,8 @@ const Register = () => {
     }
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        dispatch(fetchPostEmployeeInfo(empInfo))
+        dispatch(registerEmp(empInfo))
         setEmpInfo(tempEmp);
-        dispatch(fetchGetEmployeeInfos())
     }
     return (
         <Form onSubmit={handleSubmit}>

@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97077e8-3512-4e3e-94b9-ea7d48fa8ec9" name="변경" comment="" />
+    <list default="true" id="c97077e8-3512-4e3e-94b9-ea7d48fa8ec9" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmployList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmployList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Update.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Update.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/empApi.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/empSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/empSlice.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="33" />
+    <option name="cachedIndexableFilesCount" value="59" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -29,6 +36,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -54,7 +62,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;previous&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
@@ -111,7 +119,8 @@
       <workItem from="1770082859127" duration="2755000" />
       <workItem from="1770085648173" duration="10550000" />
       <workItem from="1770098412438" duration="71000" />
-      <workItem from="1770098501532" duration="319000" />
+      <workItem from="1770098501532" duration="1420000" />
+      <workItem from="1770100035293" duration="922000" />
     </task>
     <servers />
   </component>

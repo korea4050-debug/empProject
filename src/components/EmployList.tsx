@@ -5,7 +5,8 @@ import {RootDispatch, RootState} from "@/redux/store";
 import {selectId} from "@/redux/empSlice";
 import {useDispatch} from "react-redux";
 import styled from "styled-components";
-import {fetchGetEmployeeInfos} from "@/redux/empApi";
+
+
 
 export const Buttons = styled.div`
     display: flex;
@@ -19,10 +20,6 @@ export const Buttons = styled.div`
 const EmployList = () => {
     const {infos} = useSelector((state:RootState) => state.emp)
     const dispatch = useDispatch<RootDispatch>();
-
-    useEffect(() => {
-        dispatch(fetchGetEmployeeInfos())
-    },[dispatch])
 
     return (
         <>
