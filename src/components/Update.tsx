@@ -26,6 +26,8 @@ const Update = () => {
         dispatch(updateEmp(empInfo));
         setEmpInfo(tempEmp);
 
+
+
     }
     return (
         <Form onSubmit={handleSubmit}>
