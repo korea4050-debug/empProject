@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97077e8-3512-4e3e-94b9-ea7d48fa8ec9" name="변경" comment="" />
+    <list default="true" id="c97077e8-3512-4e3e-94b9-ea7d48fa8ec9" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/empApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/empApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/empSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/empSlice.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="33" />
+    <option name="cachedIndexableFilesCount" value="36" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -25,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="korea4050" />
+        <entry key="$PROJECT_DIR$" value="graphql" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +70,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Next.js: 서버 측.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\tj\\Desktop\\frontend\\emp-app\\node_modules\\typescript\\lib&quot;,
@@ -112,6 +117,7 @@
       <workItem from="1770085648173" duration="10550000" />
       <workItem from="1770098412438" duration="71000" />
       <workItem from="1770098501532" duration="319000" />
+      <workItem from="1770177802828" duration="2316000" />
     </task>
     <servers />
   </component>

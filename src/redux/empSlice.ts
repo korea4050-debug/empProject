@@ -50,7 +50,7 @@ const empSlice = createSlice({
             // console.log("selectId", state.selectedId);
             state.selectedId = action.payload
             state.upInfo = state.infos.filter(info=>info.id===action.payload)[0]
-            // console.log("selectId", state.selectedId);
+            console.log("selectId", state.selectedId);
         },
         changeMode(state: EmpState, action: PayloadAction<Mode>){
             if(action.payload === "delete"){
