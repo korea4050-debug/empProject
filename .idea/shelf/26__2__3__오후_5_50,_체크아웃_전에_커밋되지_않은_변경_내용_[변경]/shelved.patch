@@ -1,0 +1,20 @@
+Index: src/redux/empSlice.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {createSlice, PayloadAction} from '@reduxjs/toolkit';\r\nimport {Employee} from \"@/types/type\";\r\n\r\n\r\nexport const tempEmp: Employee = {\r\n    id:\"\", name:\"\", age: 0, job:\"\", language: \"\", pay:0\r\n}\r\n\r\ntype Mode = \"\" | \"register\" | \"update\" | \"delete\" | \"reset\"\r\n\r\n\r\nconst initialData: Employee[] = [\r\n    {id: \"1\", name: 'John', age: 35, job: \"frontend\", language: \"react\", pay: 1},\r\n    {id: \"2\", name: 'Peter', age: 35, job: \"backend\", language: \"python\", pay: 1},\r\n    {id: \"3\", name: 'Sue', age: 35, job: \"frontend\", language: \"javascript\", pay: 1},\r\n    {id: \"4\", name: 'Susan', age: 35, job: \"backend\", language: \"java\", pay: 1},\r\n]\r\n\r\nexport interface ModeItems{\r\n    id: Mode;\r\n    label: string;\r\n}\r\n\r\nexport const modes: ModeItems[] = [\r\n    {id:\"register\", label:\"Register\"},\r\n    {id:\"update\", label:\"Update\"},\r\n    {id:\"delete\", label:\"Delete\"},\r\n    {id:\"reset\", label:\"Reset\"},\r\n]\r\n\r\ninterface EmpState{\r\n    mode: Mode;\r\n    selectedId: string;\r\n    upInfo: Employee;\r\n    infos: Employee[];\r\n    error: string | null;\r\n    loading: boolean;\r\n}\r\n// 스키마 설계\r\nconst initialState: EmpState = {\r\n    mode: \"\",\r\n    selectedId: \"\",\r\n    upInfo: tempEmp,\r\n    infos: initialData,\r\n    error: null,\r\n    loading: false,\r\n}\r\n\r\nconst empSlice = createSlice({\r\n    name: \"empSlice\",\r\n    initialState,\r\n    reducers:{\r\n        selectId(state: EmpState, action: PayloadAction<string>){\r\n            // console.log(\"selectId\", state.selectedId);\r\n            state.selectedId = action.payload\r\n            state.upInfo = state.infos.filter(info=>info.id===action.payload)[0]\r\n            // console.log(\"selectId\", state.selectedId);\r\n        },\r\n        registerEmp(state: EmpState, action: PayloadAction<Employee>){\r\n            const nextId = state.infos.length ?\r\n                Math.max(...state.infos.map(info => Number(info.id)))+ 1\r\n                : 1\r\n            state.infos = [\r\n                ...state.infos,\r\n                {...action.payload, id:String(nextId)}\r\n            ]\r\n        },\r\n        updateEmp(state: EmpState, action: PayloadAction<Employee>){\r\n            state.infos = state.infos.map(info =>\r\n                (\r\n                    info.id === state.selectedId ?\r\n                        {...action.payload, id: String(info.id)}\r\n                        : info\r\n                )\r\n            )\r\n        },\r\n        changeMode(state: EmpState, action: PayloadAction<Mode>){\r\n            if(action.payload === \"delete\"){\r\n                state.infos = state.infos.filter(info=>info.id!==state.selectedId);\r\n                state.upInfo = tempEmp\r\n            }\r\n            else if(action.payload === \"update\"){\r\n                if(!state.selectedId) return;\r\n                state.upInfo = state.infos.filter(info=>info.id==state.selectedId)[0];\r\n            }\r\n            state.mode = action.payload;\r\n        }\r\n    }\r\n})\r\n\r\nexport const {selectId, changeMode,updateEmp,registerEmp} = empSlice.actions;\r\nexport default empSlice.reducer;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/redux/empSlice.ts b/src/redux/empSlice.ts
+--- a/src/redux/empSlice.ts	(revision 622c663148c08e6d322356cd912960af004f96a7)
++++ b/src/redux/empSlice.ts	(date 1770108610456)
+@@ -85,7 +85,8 @@
+             }
+             state.mode = action.payload;
+         }
+-    }
++    },
++
+ })
+ 
+ export const {selectId, changeMode,updateEmp,registerEmp} = empSlice.actions;
